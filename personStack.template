@@ -184,13 +184,14 @@ Resources:
         RequestTemplates:
           application/json: Action=SendMessage&MessageBody=$input.body
         Type: AWS
-        Uri: !Join 
-          - 'arn:aws:apigateway': null
-          - !Ref 'AWS:::Region'
-          - ':sqs::path/'
-          - !Ref 'AWS::AccountId'
-          - /
-          - !GetAtt personSQS.QueueName
+        Uri: !Join
+          - ''
+          - - 'arn:aws:apigateway:'
+            - !Ref 'AWS::Region'
+            - ':sqs::path/'
+            - !Ref 'AWS::AccountId'
+            - /
+            - !GetAtt personSQS.QueueName
       RequestModels:
         - !Ref PersonModel
     Metadata:
