@@ -163,7 +163,9 @@ Resources:
         id: 30c3be01-32ca-461e-9707-84a5dc1e93ec
   PersonAPIGatewayAPICF:
     Type: 'AWS::ApiGateway::RestApi'
-    Properties: {}
+    Properties:
+      Description: API That takes a person object and drops it on SQS Queue
+      Name: PersonAPIGateway
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 77625af4-9305-46d7-885a-f9556ef9dffb
