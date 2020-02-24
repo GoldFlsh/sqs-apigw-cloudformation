@@ -1,0 +1,37 @@
+$schema: http://json-schema.org/draft-04/schema#
+type: object
+required:
+  - name
+  - email
+  - phone
+properties:
+  name:
+    type: string
+    pattern: "^([A-Za-z]*)$"
+  address:
+    type: object
+    title: The Address Schema
+    required:
+      - street
+      - city
+      - state
+      - zip
+    properties:
+      street:
+        type: string
+        pattern: "^(.*)$"
+      city:
+        type: string
+        pattern: "^([A-Za-z]*)$"
+      state:
+        type: string
+        pattern: "^([A-Za-z]{2})$"
+      zip:
+        type: string
+        pattern: "^([0-9]{5})$"
+  email:
+    type: string
+    pattern: "^(.*)$"
+  phone:
+    type: string
+    pattern: "^([0-9]{10})$"

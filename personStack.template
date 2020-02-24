@@ -37,6 +37,8 @@ Metadata:
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
     30c3be01-32ca-461e-9707-84a5dc1e93ec:
       size:
         width: 60
@@ -48,6 +50,8 @@ Metadata:
       parent: 77625af4-9305-46d7-885a-f9556ef9dffb
       embeds: []
       iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
@@ -115,6 +119,8 @@ Metadata:
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
     e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f:
       size:
         width: 60
@@ -158,6 +164,45 @@ Resources:
     Type: 'AWS::ApiGateway::Model'
     Properties:
       RestApiId: !Ref PersonAPIGatewayAPICF
+      ContentType: application/json
+      Schema:
+        $schema: 'http://json-schema.org/draft-04/schema#'
+        type: object
+        required:
+          - name
+          - email
+          - phone
+        properties:
+          name:
+            type: string
+            pattern: '^([A-Za-z]*)$'
+          address:
+            type: object
+            title: The Address Schema
+            required:
+              - street
+              - city
+              - state
+              - zip
+            properties:
+              street:
+                type: string
+                pattern: ^(.*)$
+              city:
+                type: string
+                pattern: '^([A-Za-z]*)$'
+              state:
+                type: string
+                pattern: '^([A-Za-z]{2})$'
+              zip:
+                type: string
+                pattern: '^([0-9]{5})$'
+          email:
+            type: string
+            pattern: ^(.*)$
+          phone:
+            type: string
+            pattern: '^([0-9]{10})$'
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 30c3be01-32ca-461e-9707-84a5dc1e93ec
@@ -186,7 +231,7 @@ Resources:
         RequestTemplates:
           application/json: Action=SendMessage&MessageBody=$input.body
         Type: AWS
-        Uri: !Join
+        Uri: !Join 
           - ''
           - - 'arn:aws:apigateway:'
             - !Ref 'AWS::Region'
