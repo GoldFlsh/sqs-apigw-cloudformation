@@ -26,6 +26,12 @@ Metadata:
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
     30c3be01-32ca-461e-9707-84a5dc1e93ec:
       size:
         width: 60
@@ -37,6 +43,12 @@ Metadata:
       parent: 77625af4-9305-46d7-885a-f9556ef9dffb
       embeds: []
       iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
@@ -82,6 +94,12 @@ Metadata:
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
     e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f:
       size:
         width: 60
@@ -97,7 +115,7 @@ Metadata:
         height: 60
       position:
         x: 630
-        'y': 320
+        'y': 380
       z: 0
       embeds: []
     2b8eeed4-bd0a-47bf-aece-b2150dd5958d:
@@ -106,7 +124,7 @@ Metadata:
         height: 60
       position:
         x: 630
-        'y': 410
+        'y': 280
       z: 0
       embeds: []
       isassociatedwith:
@@ -150,13 +168,15 @@ Resources:
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-          - Action:
-              - 'sts:AssumeRole'
+          - Action: 'sts:AssumeRole'
             Effect: Allow
             Principal:
-              Service:
-                - apigateway.amazonaws.com
+              Service: apigateway.amazonaws.com
         Version: 2012-10-17
+      ManagedPolicyArns:
+        - !Ref personSQSPolicy
+        - >-
+          arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs
     Metadata:
       'AWS::CloudFormation::Designer':
         id: e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f
