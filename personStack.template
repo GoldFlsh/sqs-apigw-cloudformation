@@ -32,6 +32,11 @@ Metadata:
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
     30c3be01-32ca-461e-9707-84a5dc1e93ec:
       size:
         width: 60
@@ -43,6 +48,11 @@ Metadata:
       parent: 77625af4-9305-46d7-885a-f9556ef9dffb
       embeds: []
       iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
@@ -85,6 +95,11 @@ Metadata:
       isassociatedwith:
         - 30c3be01-32ca-461e-9707-84a5dc1e93ec
       iscontainedinside:
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
@@ -155,15 +170,33 @@ Resources:
   personPOSTCF:
     Type: 'AWS::ApiGateway::Method'
     Properties:
-      ResourceId: !Ref PersonAPIGatewayResourceCF
+      'AuthorizationType:': NONE
       HttpMethod: POST
-      Integeration: null
+      ResourceId: !Ref PersonAPIGatewayResourceCF
+      Integeration:
+        Credentials: !GetAtt APIGatewaySQSRole.Arn
+        IntegrationHttpMethod: POST
+        IntegrationResponses:
+          - StatusCode: '200'
+        PassthroughBehavior: NEVER
+        RequestParameters:
+          integration.request.header.Content-Type: application/x-www-form-urlencoded
+        RequestTemplates:
+          application/json: Action=SendMessage&MessageBody=$input.body
+        Type: AWS
+        Uri: !Join 
+          - 'arn:aws:apigateway': null
+          - !Ref 'AWS:::Region'
+          - ':sqs::path/'
+          - !Ref 'AWS::AccountId'
+          - /
+          - !GetAtt personSQS.QueueName
       RequestModels:
         - !Ref PersonModel
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 01610937-7827-43da-b1c6-f95f147e4821
-  APIGatewaySQS:
+  APIGatewaySQSRole:
     Type: 'AWS::IAM::Role'
     Properties:
       AssumeRolePolicyDocument:
