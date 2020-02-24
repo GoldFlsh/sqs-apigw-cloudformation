@@ -1,0 +1,182 @@
+AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  'AWS::CloudFormation::Designer':
+    778a9303-2536-414d-be55-58e7e94a0e9b:
+      size:
+        width: 560
+        height: 390
+      position:
+        x: 810
+        'y': 210
+      z: 1
+      parent: 77625af4-9305-46d7-885a-f9556ef9dffb
+      embeds:
+        - 01610937-7827-43da-b1c6-f95f147e4821
+      iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+    30c3be01-32ca-461e-9707-84a5dc1e93ec:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 1410
+        'y': 210
+      z: 1
+      parent: 77625af4-9305-46d7-885a-f9556ef9dffb
+      embeds: []
+      iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+    77625af4-9305-46d7-885a-f9556ef9dffb:
+      size:
+        width: 700
+        height: 450
+      position:
+        x: 800
+        'y': 180
+      z: 0
+      embeds:
+        - 30c3be01-32ca-461e-9707-84a5dc1e93ec
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+    01610937-7827-43da-b1c6-f95f147e4821:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 840
+        'y': 250
+      z: 2
+      parent: 778a9303-2536-414d-be55-58e7e94a0e9b
+      embeds: []
+      isassociatedwith:
+        - 30c3be01-32ca-461e-9707-84a5dc1e93ec
+      iscontainedinside:
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+    e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 630
+        'y': 190
+      z: 0
+      embeds: []
+    21ede4d3-4346-4adc-8989-3e5901a0ceb7:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 630
+        'y': 320
+      z: 0
+      embeds: []
+    2b8eeed4-bd0a-47bf-aece-b2150dd5958d:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: 630
+        'y': 410
+      z: 0
+      embeds: []
+      isassociatedwith:
+        - 21ede4d3-4346-4adc-8989-3e5901a0ceb7
+Resources:
+  PersonAPIGatewayResourceCF:
+    Type: 'AWS::ApiGateway::Resource'
+    Properties:
+      RestApiId: !Ref PersonAPIGatewayAPICF
+      ParentId: !GetAtt PersonAPIGatewayAPICF.RootResourceId
+      PathPart: person
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 778a9303-2536-414d-be55-58e7e94a0e9b
+  PersonModel:
+    Type: 'AWS::ApiGateway::Model'
+    Properties:
+      RestApiId: !Ref PersonAPIGatewayAPICF
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 30c3be01-32ca-461e-9707-84a5dc1e93ec
+  PersonAPIGatewayAPICF:
+    Type: 'AWS::ApiGateway::RestApi'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 77625af4-9305-46d7-885a-f9556ef9dffb
+  personPOSTCF:
+    Type: 'AWS::ApiGateway::Method'
+    Properties:
+      ResourceId: !Ref PersonAPIGatewayResourceCF
+      HttpMethod: POST
+      Integeration: null
+      RequestModels:
+        - !Ref PersonModel
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 01610937-7827-43da-b1c6-f95f147e4821
+  APIGatewaySQS:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - apigateway.amazonaws.com
+        Version: 2012-10-17
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f
+  personSQS:
+    Type: 'AWS::SQS::Queue'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 21ede4d3-4346-4adc-8989-3e5901a0ceb7
+  personSQSPolicy:
+    Type: 'AWS::SQS::QueuePolicy'
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 2b8eeed4-bd0a-47bf-aece-b2150dd5958d
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          Effect: Allow
+          Action: 'sqs:SendMessage'
+          Resource: !Ref personSQS
+      Queues:
+        - !Ref personSQS

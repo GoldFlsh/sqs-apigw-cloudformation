@@ -1,0 +1,23 @@
+---
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  person-queue-cf:
+    Type: AWS::SQS::Queue
+
+
+Description: API Gateway -> SQS -> Lambda
+
+Outputs:
+  person-queue-cfURL:
+    Value:
+      Ref: person-queue-cf
+  person-queue-cfQueueARN:
+    Value:
+      Fn::GetAtt:
+        - person-queue-cf
+        - Arn
+  person-queue-cfQueueName:
+    Value:
+      Fn::GetAtt:
+        - person-queue-cf
+        - QueueName
