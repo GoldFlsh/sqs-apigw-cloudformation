@@ -39,6 +39,24 @@ Metadata:
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
     30c3be01-32ca-461e-9707-84a5dc1e93ec:
       size:
         width: 60
@@ -50,6 +68,24 @@ Metadata:
       parent: 77625af4-9305-46d7-885a-f9556ef9dffb
       embeds: []
       iscontainedinside:
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
+        - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
         - 77625af4-9305-46d7-885a-f9556ef9dffb
@@ -121,6 +157,24 @@ Metadata:
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
         - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
+        - 778a9303-2536-414d-be55-58e7e94a0e9b
     e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f:
       size:
         width: 60
@@ -136,7 +190,7 @@ Metadata:
         height: 60
       position:
         x: 630
-        'y': 380
+        'y': 340
       z: 0
       embeds: []
     2b8eeed4-bd0a-47bf-aece-b2150dd5958d:
@@ -144,8 +198,8 @@ Metadata:
         width: 60
         height: 60
       position:
-        x: 630
-        'y': 280
+        x: 520
+        'y': 340
       z: 0
       embeds: []
       isassociatedwith:
@@ -217,10 +271,11 @@ Resources:
   personPOSTCF:
     Type: 'AWS::ApiGateway::Method'
     Properties:
-      'AuthorizationType:': NONE
+      RestApiId: !Ref PersonAPIGatewayAPICF
+      AuthorizationType: NONE
       HttpMethod: POST
       ResourceId: !Ref PersonAPIGatewayResourceCF
-      Integeration:
+      Integration:
         Credentials: !GetAtt APIGatewaySQSRole.Arn
         IntegrationHttpMethod: POST
         IntegrationResponses:
@@ -231,16 +286,16 @@ Resources:
         RequestTemplates:
           application/json: Action=SendMessage&MessageBody=$input.body
         Type: AWS
-        Uri: !Join 
+        Uri: !Join
           - ''
           - - 'arn:aws:apigateway:'
             - !Ref 'AWS::Region'
-            - ':sqs::path/'
+            - ':sqs:path/'
             - !Ref 'AWS::AccountId'
             - /
             - !GetAtt personSQS.QueueName
       RequestModels:
-        - !Ref PersonModel
+        application/json: !Ref PersonModel
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 01610937-7827-43da-b1c6-f95f147e4821
@@ -255,9 +310,15 @@ Resources:
               Service: apigateway.amazonaws.com
         Version: 2012-10-17
       ManagedPolicyArns:
-        - !Ref personSQSPolicy
         - >-
           arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs
+      Policies:
+        - PolicyName: api-gw-person-role
+          PolicyDocument:
+            Statement:
+              - Action: 'sqs:SendMessage'
+                Effect: Allow
+                Resource: !GetAtt personSQS.Arn
     Metadata:
       'AWS::CloudFormation::Designer':
         id: e8b77675-63a6-42f3-a4dd-2ebaf1a9ab9f
@@ -277,7 +338,7 @@ Resources:
         Version: 2012-10-17
         Statement:
           Effect: Allow
-          Action: 'sqs:SendMessage'
-          Resource: !Ref personSQS
+          Action: 'sqs:*'
+          Resource: !GetAtt personSQS.Arn
       Queues:
         - !Ref personSQS
