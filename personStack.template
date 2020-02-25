@@ -282,7 +282,7 @@ Resources:
           - StatusCode: '200'
         PassthroughBehavior: NEVER
         RequestParameters:
-          integration.request.header.Content-Type: application/x-www-form-urlencoded
+          integration.request.header.Content-Type: '''application/x-www-form-urlencoded'''
         RequestTemplates:
           application/json: Action=SendMessage&MessageBody=$input.body
         Type: AWS
@@ -296,6 +296,10 @@ Resources:
             - !GetAtt personSQS.QueueName
       RequestModels:
         application/json: !Ref PersonModel
+      MethodResponses:
+        - ResponseModels:
+            application/json: Empty
+          StatusCode: '200'
     Metadata:
       'AWS::CloudFormation::Designer':
         id: 01610937-7827-43da-b1c6-f95f147e4821
