@@ -10,6 +10,6 @@ workflows:
   # Name the workflow "welcome"
   deploy-to-cloud:
     jobs:
-      - aws-cloudformation/deploy:
+      - cloudformation/deploy:
           stack-name: person-stack-circle
           template: personStack.template
