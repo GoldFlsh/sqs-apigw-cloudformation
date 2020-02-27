@@ -12,10 +12,7 @@ jobs:
       - checkout
       - aws-cli/setup
       - run: echo "Deploying to Cloud-Formation"
-      - run: >
-          aws cloudformation deploy
-            --stack-name person-stack-ci
-            --template-file=personStack.template
+      - run: aws cloudformation deploy --stack-name person-stack-ci --template-file personStack.template
 
 
 # Orchestrate or schedule a set of jobs
