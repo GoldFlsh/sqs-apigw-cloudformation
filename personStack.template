@@ -346,3 +346,14 @@ Resources:
           Resource: !GetAtt personSQS.Arn
       Queues:
         - !Ref personSQS
+  apiGatewayDeployment:
+    DependsOn: personPOSTCF
+    Properties:
+      RestApiId: !Ref 'PersonAPIGatewayAPICF'
+    Type: AWS::ApiGateway::Deployment
+  apiGatewayStage:
+    Properties:
+      DeploymentId: !Ref 'apiGatewayDeployment'
+      RestApiId: !Ref 'PersonAPIGatewayAPICF'
+      StageName: dev
+    Type: AWS::ApiGateway::Stage
