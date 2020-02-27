@@ -11,5 +11,5 @@ workflows:
   deploy-to-cloud:
     jobs:
       - cloudformation/deploy:
-          stack-name: person-stack-circle
+          stack_name: person-stack-circle
           template: personStack.template
