@@ -13,7 +13,7 @@ jobs:
       - aws-cli/setup
       - run: echo "Deploying to Cloud-Formation"
       - run: >
-          aws-cli cloudformation deploy
+          aws cloudformation deploy
             --stack-name person-stack-ci
             --template-file=personStack.template
 
