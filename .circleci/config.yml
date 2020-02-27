@@ -3,13 +3,24 @@ version: 2.1
 # Use a package of configuration called an orb.
 orbs:
   # Declare a dependency on the welcome-orb
-  cloudformation: frameio/cloudformation@0.13.1
+  aws-cli: circleci/aws-cli@0.1.20
+
+jobs:
+  deploy-to-cloud:
+    executor: aws-cli/default
+    steps:
+      - checkout
+      - aws-cli/setup
+      - run: echo "Deploying to Cloud-Formation"
+      - run: >
+          aws-cli cloudformation deploy
+            --stack-name person-stack-ci
+            --template-file=personStack.template
+
 
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
-  deploy-to-cloud:
+  do-deploy:
     jobs:
-      - cloudformation/deploy:
-          stack_name: person-stack-circle
-          template: personStack.template
+      - deploy-to-cloud
